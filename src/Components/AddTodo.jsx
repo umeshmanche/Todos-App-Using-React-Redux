@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { TodoActions } from "../store/TodoSlice";
 import { v4 as uuid } from 'uuid';
+import { formActions } from "../store/FormSlice";
 
 const AddTodo = () => {
 
@@ -28,6 +29,9 @@ const AddTodo = () => {
             dateAndTime: "",
             reminder: false
         })
+
+        // hiding todo form 
+        dispatch(formActions.manageForm());
     }
 
     const onChangeHandler = (event) => {
