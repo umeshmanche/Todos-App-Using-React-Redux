@@ -1,0 +1,23 @@
+.todo-form {
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 10px;
+    width: calc(100% - 40px);
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-form Button {
+    width: 95%;
+    margin: 10px 5px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: black;
+}

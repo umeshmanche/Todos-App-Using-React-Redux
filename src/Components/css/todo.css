@@ -1,0 +1,25 @@
+.todo {
+    text-align: left;
+    border: 1px solid rgb(230, 230, 230);
+    margin: 3px;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo h3 {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo p {
+    margin: 2px;
+    font-size: 14px;
+}
+
+.reminder {
+    border-top-left-radius: none;
+    border-bottom-left-radius: none;
+    border-left: 5px solid red;
+}

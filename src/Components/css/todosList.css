@@ -1,0 +1,4 @@
+.todosList {
+    max-height: 48vh;
+    overflow: auto;
+}

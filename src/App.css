@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+  width: 35%;
+  margin: 2% auto;
+  padding: 1%;
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 4px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .App {
+    width: 96%;
+    margin: 2%;
+  }
+  #root {
+    width: 96%;
+    margin-left: 1%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width:767px) {
+  .App {
+    width: 96%;
+    margin: 2%;
+  }
+
+  #root {
+    width: 85%;
+    margin-left: 7%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .App {
+    width: 90%;
+    margin-left: 4%;
+  }
+
+  #root {
+    width: 60%;
+    margin: auto 20%;
+  }
+}

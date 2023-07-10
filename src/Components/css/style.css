@@ -1,0 +1,15 @@
+Button {
+    padding: 0px 20px;
+    border-color: rgba(0, 128, 0, 0.178);
+    color: white;
+    border-radius: 4px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+/* 
+@media only screen and (max-width:480px){
+    
+} */
