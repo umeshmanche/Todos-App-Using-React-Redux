@@ -49,9 +49,9 @@ const AddTodo = () => {
         <div className="todo-form">
             <form >
                 <label >Title</label>
-                <input type="text" name="title" placeholder="add todo" onChange={onChangeHandler}/>
+                <input type="text" name="title" placeholder="Add todo" onChange={onChangeHandler}/>
                 <label >Date & Time</label>
-                <input type="text" name="dateAndTime" placeholder="date and time" onChange={onChangeHandler}/>
+                <input type="text" name="dateAndTime" placeholder="Date and time" onChange={onChangeHandler}/>
                 <label >
                     Set Reminder
                     <input type="checkbox" name="reminder" style={{width:"fit-content"}} onChange={onChangeHandler}/>
