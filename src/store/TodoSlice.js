@@ -6,10 +6,14 @@ const TodoSlice = createSlice({
         todosList: []
     },
     reducers: {
+        fetchTasksFromLocalStorage(state, action) {
+            if(action.payload) {
+                state.todosList = action.payload;
+            }
+        },
         addTask(state, action) {
             state.todosList = [...state.todosList, action.payload];
-            console.log(action.payload);
-            console.log(state.todosList);
+            localStorage.setItem("todos", JSON.stringify(state.todosList));
         },
         deleteTask(state, action) {
             const newTodo = action.payload;
@@ -19,6 +23,7 @@ const TodoSlice = createSlice({
             if(existing) {
                 const newTodoList = todos.filter(t => t.id !== newTodo.id);
                 state.todosList = newTodoList;
+                localStorage.setItem("todos", JSON.stringify(state.todosList));
             }
             else {
                 console.log("todo not found!!");
@@ -32,6 +37,7 @@ const TodoSlice = createSlice({
                 }
                 return t;
             })
+            localStorage.setItem("todos", JSON.stringify(state.todosList));
         }
     }
 })

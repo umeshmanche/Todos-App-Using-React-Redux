@@ -1,15 +1,27 @@
 import Header from "./Header"
 import AddTodo from "./AddTodo";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector, useDispatch } from "react-redux";
 import Todo from "./Todo";
 import "./css/home.css"
 import "./css/todosList.css"
+import { TodoActions } from "../store/TodoSlice";
+import { useEffect } from "react";
+
 
 const Home = () => {
-
+    const dispatch = useDispatch();
     const formStore = useSelector(store => store.form);
     const todoStore = useSelector(store => store.todos);
     const todos = todoStore.todosList;
+    
+    useEffect(() => {
+        onReload();
+    }, []);
+    
+    const onReload = () => {
+        const list = JSON.parse(localStorage.getItem("todos"));
+        dispatch(TodoActions.fetchTasksFromLocalStorage(list));
+    }
 
     return (
         <div className="home">
@@ -23,6 +35,7 @@ const Home = () => {
                     )
                 }
             </div>
+            <a href="http://github.com/umeshmanche/Todos-App-Using-React-Redux" target="_blank">Check out the Github Repository.</a>
         </div>
     );
 }
